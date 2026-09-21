@@ -12,3 +12,11 @@ jobs:
         run: npm run test
       - name: Final Step
         run: echo "Workflow 1 completed successfully!"
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - name: List down the github context object
+        run: |
+        echo "GITHUB OBJECT:"
+        echo "${ toJSON(github) }"
