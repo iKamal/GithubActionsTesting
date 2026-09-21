@@ -19,4 +19,4 @@ jobs:
       - name: List down the github context object
         run: |
           echo "GITHUB OBJECT:"
-          echo "${ toJSON(github) }"
+          echo "${{ toJSON(github) }}"
