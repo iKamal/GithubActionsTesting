@@ -1,0 +1,12 @@
+name: Workflow 1
+on: [workflow_dispatch, push]
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Run Unit Tests
+        run: npm run test
+      - name: Final Step
+        run: echo "Workflow 1 completed successfully!"
